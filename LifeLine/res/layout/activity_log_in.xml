@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LogInActivity" >
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/usernameTextView"
+        android:layout_marginLeft="25dp"
+        android:background="@color/alice_blue"
+        android:ems="10"
+        android:inputType="text|textPersonName" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameEditText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="126dp"
+        android:textSize="18sp"
+        android:text="@string/username_text_view" />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/usernameTextView"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_marginTop="68dp"
+        android:text="@string/password_text_view"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordTextView"
+        android:layout_below="@+id/passwordTextView"
+        android:background="@color/alice_blue"
+        android:ems="10"
+        android:inputType="textPassword|numberPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/loginTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@color/boston_university_red" 
+        
+        android:textColor="@color/alice_blue"/>
+
+    <Button
+        android:id="@+id/enterProfileButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@color/boston_university_red"
+        android:text="@string/enter_profile"
+        android:textColor="@color/alice_blue" 
+        android:textSize="25sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.group6.lifeline"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.group6.lifeline.LifeLineActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.LogInActivity"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.WelcomePatientActivity"
+            android:label="@string/patient_welcome_text_view" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.WelcomeDoctorActivity"
+            android:label="@string/title_activity_welcome_doctor" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.WelcomeNurseActivity"
+            android:label="@string/title_activity_welcome_nurse" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.AdminLoginActivity"
+            android:label="@string/title_activity_admin_login" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AdminLoginActivity" >
+
+    <TextView
+        android:id="@+id/welcomeAdminTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/boston_university_red"
+        android:gravity="center"
+        android:text="@string/admin_login_button"
+        android:textColor="@color/alice_blue"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/adminPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcomeAdminTextView"
+        android:layout_below="@+id/welcomeAdminTextView"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/password_text_view" />
+
+    <EditText
+        android:id="@+id/adminPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/adminPasswordTextView"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:background="@color/alice_blue"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adminPasswordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:background="@color/boston_university_red"
+        android:textColor="@color/alice_blue" 
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginTop="30dp"
+        android:background="@color/boston_university_red"
+        android:textColor="@color/alice_blue" 
+        android:text="Button" />
+
+</RelativeLayout>
