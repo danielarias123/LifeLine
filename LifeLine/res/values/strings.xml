@@ -19,6 +19,16 @@
     <string name="patients_text_view">Patients</string>
     <string name="admin_login_button">Admin Login</string>
     <string name="title_activity_admin_login">AdminLoginActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="title_activity_admin_welcome">AdminWelcomeActivity</string>
+    <string name="new_user_title_view">New User</string>
+    <string name="email_text_view">Email</string>
+    <string name="register_button">Register</string>
+    <string name="database_enter_button">View Existing Users</string>
+    <string name="role_text_view">Role</string>
+    <string name="role_options_text_view">( patient / doctor / nurse)</string>
+    
+    
+ 
 
 </resources>

@@ -42,6 +42,10 @@
             android:name="com.group6.lifeline.AdminLoginActivity"
             android:label="@string/title_activity_admin_login" >
         </activity>
+        <activity
+            android:name="com.group6.lifeline.AdminWelcomeActivity"
+            android:label="@string/title_activity_admin_welcome" >
+        </activity>
     </application>
 
 </manifest>

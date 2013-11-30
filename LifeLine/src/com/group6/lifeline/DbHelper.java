@@ -11,12 +11,12 @@ public class DbHelper extends SQLiteOpenHelper{
 
 	private static final String DATABASE_NAME = "lifeline.db";
     private static final int DATABASE_VERSION = 1;
-    public static final String LOGIN_TABLE_NAME = "login";
+    public static final String LIFELINE_TABLE_NAME = "login";
     private static final String LIFELINE_TABLE_CREATE =
-                    "CREATE TABLE " + LOGIN_TABLE_NAME + "(" +
+                    "CREATE TABLE " + LIFELINE_TABLE_NAME + "(" +
                     "_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                    "username TEXT NOT NULL, password TEXT NOT NULL, email TEXT NOT NULL);";
-    private static final String LIFELINE_DB_ADMIN = "INSERT INTO "+LOGIN_TABLE_NAME+"values(1, admin, password, admin@gmail.com);";
+                    "username TEXT NOT NULL, password TEXT NOT NULL, role TEXT NOT NULL);";
+    private static final String LIFELINE_DB_ADMIN = "INSERT INTO "+LIFELINE_TABLE_NAME+"values(1, admin, password, admin@gmail.com);";
     
     public DbHelper(Context context) {
         
@@ -40,6 +40,7 @@ public class DbHelper extends SQLiteOpenHelper{
                 System.out.println("In onCreate");
         }catch(Exception e){
                 e.printStackTrace();
+                
         }
     }
     @Override

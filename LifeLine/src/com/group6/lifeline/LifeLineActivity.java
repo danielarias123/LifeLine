@@ -5,10 +5,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class LifeLineActivity extends Activity {
+public class LifeLineActivity extends Activity implements OnClickListener{
 
 	TextView titleTextView;
 	
@@ -23,31 +26,30 @@ public class LifeLineActivity extends Activity {
 		setContentView(R.layout.activity_life_line);
 		
 		LogInButton = (Button) findViewById(R.id.LogInbutton);
+		LogInButton.setOnClickListener(this);
 		
-		AdminLoginButton = (Button) findViewById(R.id.adminLoginButton);
+		AdminLoginButton = (Button) findViewById(R.id.enterAdminButton);
+		AdminLoginButton.setOnClickListener(this);
+		}
 	
-		
-		LogInButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(v.getContext(), LogInActivity.class);
-				startActivity(intent);
-			}
-		});
-		
-		AdminLoginButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(v.getContext(), LogInActivity.class);
-				startActivity(i);
-			}
-		});
-		
-
-		
-	}
+	public void onClick(View v) {
+        
+        switch(v.getId()){
+        
+        case R.id.LogInbutton:
+        	Intent intent = new Intent(LifeLineActivity.this, LogInActivity.class);
+            startActivity(intent);
+            finish();
+            break;
+                
+                
+        case R.id.enterAdminButton:
+                Intent i = new Intent(LifeLineActivity.this, AdminLoginActivity.class);
+                startActivity(i);
+                finish();
+                break;
+        }
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

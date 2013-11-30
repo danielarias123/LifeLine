@@ -31,7 +31,7 @@
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/adminLoginButton"
+        android:id="@+id/enterAdminButton"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="150dp"
         android:layout_height="25dp"

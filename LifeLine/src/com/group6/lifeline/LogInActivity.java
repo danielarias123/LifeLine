@@ -19,6 +19,7 @@ public class LogInActivity extends Activity implements OnClickListener {
 	Button enterProfileButton;
 	EditText usernameEditText;
 	EditText passwordEditText;
+	EditText roleEditText;
 	DbHelper mydb = null;
 
 	@Override
@@ -33,27 +34,45 @@ public class LogInActivity extends Activity implements OnClickListener {
 		
 		 usernameEditText = (EditText)findViewById(R.id.usernameEditText);
          passwordEditText = (EditText)findViewById(R.id.passwordEditText);
+         roleEditText = (EditText)findViewById(R.id.roleEditText);
          
          String username = usernameEditText.getText().toString();
          String password = passwordEditText.getText().toString();
+         String role = roleEditText.getText().toString();
+        
          
          if(username.equals("") || username == null){
                  Toast.makeText(getApplicationContext(), "Username Empty", Toast.LENGTH_SHORT).show();
          }else if(password.equals("") || password == null){
                  Toast.makeText(getApplicationContext(), "Password Empty", Toast.LENGTH_SHORT).show();
+         }else if(role.equals("") || password == null){
+             Toast.makeText(getApplicationContext(), "Role Empty", Toast.LENGTH_SHORT).show();
          }else{
-                 boolean validLogin = validateLogin(username, password, LogInActivity.this);
-                 if(validLogin){
+                 boolean validLogin = validateLogin(username, password, role, LogInActivity.this);
+                 
+                 if((validLogin) && (role.equals("doctor"))){
                          System.out.println("In Valid");
                          Intent i = new Intent(LogInActivity.this, WelcomeDoctorActivity.class);
                          startActivity(i);
                          finish();
+                 }else if((validLogin) && (role.equals("patient"))){
+                	 	 System.out.println("In Valid");
+                	 	 Intent i = new Intent(LogInActivity.this, WelcomePatientActivity.class);
+                	 	 startActivity(i);
+                	 	 finish();
+                	 
+                 }else if((validLogin) && (role.equals("nurse"))){
+            	 	 System.out.println("In Valid");
+            	 	 Intent i = new Intent(LogInActivity.this, WelcomeNurseActivity.class);
+            	 	 startActivity(i);
+            	 	 finish();
                  }
          }
 		
 	}
 	
-	 public boolean validateLogin(String username, String password, Context context) {
+	 @SuppressWarnings("deprecation")
+	public boolean validateLogin(String username, String password, String role, Context context) {
          
          mydb = new DbHelper(context);
          SQLiteDatabase db = mydb.getReadableDatabase();
@@ -61,15 +80,15 @@ public class LogInActivity extends Activity implements OnClickListener {
          String[] columns = {"_id"};
          
          //WHERE clause
-         String selection = "username=? AND password=?";
+         String selection = "username=? AND password=? AND email=?";
          
          //WHERE clause arguments
-         String[] selectionArgs = {username,password};
+         String[] selectionArgs = {username,password,role};
          
          Cursor cursor = null;
          try{
          //SELECT _id FROM login WHERE username=username AND password=password
-         cursor = db.query(DbHelper.LOGIN_TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+         cursor = db.query(DbHelper.LIFELINE_TABLE_NAME, columns, selection, selectionArgs, null, null, null);
          
          startManagingCursor(cursor);
          }catch(Exception e){
@@ -84,12 +103,16 @@ public class LogInActivity extends Activity implements OnClickListener {
      
      
      return true;
-}
-
-public void onDestroy(){
-     super.onDestroy();
-     mydb.close();
-}
+	 }
+	 @Override
+	    public void onBackPressed() {
+	            super.onBackPressed();
+	            
+	            Intent i = new Intent(LogInActivity.this, LifeLineActivity.class);
+	            startActivity(i);
+	            finish();
+	    }
+	
 
          
          

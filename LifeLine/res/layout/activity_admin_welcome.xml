@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AdminWelcomeActivity" >
+
+       <TextView
+           android:id="@+id/newUserTextView"
+           android:layout_width="fill_parent"
+           android:layout_height="50dp"
+           android:background="@color/boston_university_red"
+           android:gravity="center"
+           android:text="@string/new_user_title_view"
+           android:textColor="@color/alice_blue"
+           android:textSize="22sp" />
+
+       <EditText
+           android:id="@+id/newUnameEditText"
+           android:layout_width="250dp"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/newUnameTextView"
+           android:layout_below="@+id/newUnameTextView"
+           android:ems="10"
+           android:background="@color/alice_blue"
+           android:inputType="text" />
+
+       <EditText
+           android:id="@+id/newPassEditText"
+           android:layout_width="250dp"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/newPassTestView"
+           android:layout_below="@+id/newPassTestView"
+           android:background="@color/alice_blue"
+           android:ems="10"
+           android:inputType="textPassword" />
+
+          <TextView
+              android:id="@+id/newUnameTextView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/newUserTextView"
+              android:layout_below="@+id/newUserTextView"
+              android:layout_marginLeft="24dp"
+              android:layout_marginTop="14dp"
+              android:text="@string/username_text_view" />
+
+          <TextView
+              android:id="@+id/newPassTestView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/newUnameEditText"
+              android:layout_below="@+id/newUnameEditText"
+              android:text="@string/password_text_view" />
+
+          <TextView
+              android:id="@+id/roleNewTextView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/newPassEditText"
+              android:layout_below="@+id/newPassEditText"
+              android:text="@string/role_text_view" />
+
+          <EditText
+              android:id="@+id/roleNewEditText"
+              android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/roleNewTextView"
+              android:layout_below="@+id/roleNewTextView"
+              android:background="@color/alice_blue"
+              android:ems="10"
+              android:inputType="text" >
+
+              <requestFocus />
+          </EditText>
+
+          <Button
+              android:id="@+id/dataBaseEnterButton"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/newUserTextView"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="18dp"
+              android:text="@string/database_enter_button" />
+
+          <Button
+              android:id="@+id/registerButton"
+              android:layout_width="200dp"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/buttonCancel"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="38dp"
+              android:background="@color/boston_university_red"
+              android:padding="10dp"
+              android:text="@string/register_button"
+              android:textColor="@color/alice_blue" />
+
+          <Button
+              android:id="@+id/buttonCancel"
+              android:layout_width="200dp"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/dataBaseEnterButton"
+              android:layout_alignLeft="@+id/registerButton"
+              android:layout_marginBottom="25dp"
+              android:background="@color/boston_university_red"
+              android:padding="10dp"
+              android:text="@string/cancel_button"
+              android:textColor="@color/alice_blue" />
+
+</RelativeLayout>

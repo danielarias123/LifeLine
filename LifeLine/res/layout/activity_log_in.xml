@@ -19,26 +19,6 @@
         android:ems="10"
         android:inputType="text|textPersonName" />
 
-    <TextView
-        android:id="@+id/usernameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/usernameEditText"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="126dp"
-        android:textSize="18sp"
-        android:text="@string/username_text_view" />
-
-    <TextView
-        android:id="@+id/passwordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/usernameTextView"
-        android:layout_below="@+id/usernameEditText"
-        android:layout_marginTop="68dp"
-        android:text="@string/password_text_view"
-        android:textSize="18sp" />
-
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="wrap_content"
@@ -47,7 +27,7 @@
         android:layout_below="@+id/passwordTextView"
         android:background="@color/alice_blue"
         android:ems="10"
-        android:inputType="textPassword|numberPassword" >
+        android:inputType="textPassword" >
 
         <requestFocus />
     </EditText>
@@ -68,16 +48,65 @@
         
         android:textColor="@color/alice_blue"/>
 
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/usernameTextView"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_marginTop="17dp"
+        android:text="@string/password_text_view"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/enterProfileButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordEditText"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="49dp"
         android:background="@color/boston_university_red"
         android:text="@string/enter_profile"
-        android:textColor="@color/alice_blue" 
-        android:textSize="25sp"/>
+        android:textColor="@color/alice_blue"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameEditText"
+        android:layout_below="@+id/loginTitleTextView"
+        android:layout_marginTop="51dp"
+        android:text="@string/username_text_view"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/roleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordEditText"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:text="@string/role_text_view" />
+
+    <TextView
+        android:id="@+id/roleOptionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameEditText"
+        android:layout_below="@+id/roleTextView"
+        android:text="@string/role_options_text_view"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/roleEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/roleOptionsTextView"
+        android:layout_below="@+id/roleOptionsTextView"
+        android:background="@color/alice_blue"
+        android:ems="10"
+        android:inputType="text" />
 
 </RelativeLayout>
