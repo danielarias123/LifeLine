@@ -71,9 +71,7 @@ public class DbHelper extends SQLiteOpenHelper{
       
         SQLiteDatabase db = this.getReadableDatabase();
         
-        String[]columns = new String[] {USERNAME_COL};
-        String whereClause = ROLE_COL+"= ?";
-        String[] whereArgs = {"patient"};
+        
         Cursor cursor = db.rawQuery(selectQuery, null);
       
         // looping through all rows and adding to list

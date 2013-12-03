@@ -21,6 +21,7 @@ public class LogInActivity extends Activity implements OnClickListener {
 	EditText passwordEditText;
 	EditText roleEditText;
 	DbHelper mydb = null;
+	public static String username;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class LogInActivity extends Activity implements OnClickListener {
          passwordEditText = (EditText)findViewById(R.id.passwordEditText);
          roleEditText = (EditText)findViewById(R.id.roleEditText);
          
-         String username = usernameEditText.getText().toString();
+         username = usernameEditText.getText().toString();
          String password = passwordEditText.getText().toString();
          String role = roleEditText.getText().toString();
         

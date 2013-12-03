@@ -22,32 +22,32 @@
         android:id="@+id/viewOwnRecordButton"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/record2NameTextView"
+        android:layout_below="@+id/welcome2TextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
-        android:text="@string/view_own_record_button"
+        android:layout_marginTop="156dp"
         android:background="@color/boston_university_red"
+        android:text="@string/view_own_record_button"
         android:textColor="@color/alice_blue" />
 
     <TextView
         android:id="@+id/welcome2TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/viewOwnRecordButton"
         android:layout_below="@+id/welcomeTextView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/boston_university_red"
         android:text="@string/welcome_title"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/record2NameTextView"
+        android:id="@+id/usernametextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/welcome2TextView"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/welcome2TextView"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_below="@+id/welcome2TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

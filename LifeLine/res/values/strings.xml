@@ -38,5 +38,9 @@
     <string name="allergies_text_view">Allergies (..,..,):</string>
     <string name="title_activity_doctor_edit_record">DoctorEditRecordActivity</string>
     <string name="edit_button">Make Changes</string>
+    <string name="title_activity_nurse_edit_record">NurseEditRecordActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_npatient_record">NPatientRecordActivity</string>
+    <string name="title_activity_own_record">OwnRecordActivity</string>
 
 </resources>

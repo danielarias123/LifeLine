@@ -16,12 +16,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
 public class WelcomeDoctorActivity extends Activity implements OnItemSelectedListener, OnClickListener {
-	
+	String username = LogInActivity.username;
 	Spinner doctorPatientListSpinner = null;
 	DbHelper mydb = null;
+	DbHelper mydatabase = new DbHelper(this);
 	Button viewPatientRecord;
 	Button editPatientRecord;
 	public static String patient;
@@ -36,6 +38,8 @@ public class WelcomeDoctorActivity extends Activity implements OnItemSelectedLis
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome_doctor);
 		
+		
+		
 		viewPatientRecord = (Button)findViewById(R.id.viewPatientRecordButton);
         viewPatientRecord.setOnClickListener(this);
         
@@ -45,6 +49,10 @@ public class WelcomeDoctorActivity extends Activity implements OnItemSelectedLis
 		doctorPatientListSpinner = (Spinner) findViewById(R.id.doctorPatientListSpinner);
 		doctorPatientListSpinner.setOnItemSelectedListener(this);
 		loadSpinnerData();
+		
+		TextView information = (TextView) findViewById(R.id.usernametextView1);
+		String data = mydatabase.getName(username);
+		information.setText(data);
 	}
 	
 	public void onClick(View v) {
@@ -59,7 +67,7 @@ public class WelcomeDoctorActivity extends Activity implements OnItemSelectedLis
         	
         	
         	
-            db.close();
+            
             
         	break;
         case R.id.editPatientRecordButton:

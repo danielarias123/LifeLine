@@ -54,6 +54,18 @@
             android:name="com.group6.lifeline.DoctorEditRecordActivity"
             android:label="@string/title_activity_doctor_edit_record" >
         </activity>
+        <activity
+            android:name="com.group6.lifeline.NurseEditRecordActivity"
+            android:label="@string/title_activity_nurse_edit_record" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.NPatientRecordActivity"
+            android:label="@string/title_activity_npatient_record" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.OwnRecordActivity"
+            android:label="@string/title_activity_own_record" >
+        </activity>
     </application>
 
 </manifest>
