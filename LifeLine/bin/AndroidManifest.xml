@@ -46,6 +46,14 @@
             android:name="com.group6.lifeline.AdminWelcomeActivity"
             android:label="@string/title_activity_admin_welcome" >
         </activity>
+        <activity
+            android:name="com.group6.lifeline.DPatientRecordActivity"
+            android:label="@string/title_activity_patient_record" >
+        </activity>
+        <activity
+            android:name="com.group6.lifeline.DoctorEditRecordActivity"
+            android:label="@string/title_activity_doctor_edit_record" >
+        </activity>
     </application>
 
 </manifest>

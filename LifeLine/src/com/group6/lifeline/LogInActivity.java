@@ -88,7 +88,7 @@ public class LogInActivity extends Activity implements OnClickListener {
          Cursor cursor = null;
          try{
          //SELECT _id FROM login WHERE username=username AND password=password
-         cursor = db.query(DbHelper.LIFELINE_TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+         cursor = db.query(DbHelper.LOGIN_TABLE_NAME, columns, selection, selectionArgs, null, null, null);
          
          startManagingCursor(cursor);
          }catch(Exception e){
@@ -101,7 +101,8 @@ public class LogInActivity extends Activity implements OnClickListener {
              return false;
      }
      
-     
+     db.close();
+     cursor.close();
      return true;
 	 }
 	 @Override

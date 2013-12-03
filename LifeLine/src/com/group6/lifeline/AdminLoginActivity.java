@@ -18,7 +18,7 @@ public class AdminLoginActivity extends Activity implements OnClickListener{
 	Button loginButton;
 	Button cancelButton;
 	EditText adminPassword;
-	DbHelper myDb = new DbHelper(AdminLoginActivity.this);
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

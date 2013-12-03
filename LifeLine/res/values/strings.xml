@@ -27,8 +27,16 @@
     <string name="database_enter_button">View Existing Users</string>
     <string name="role_text_view">Role</string>
     <string name="role_options_text_view">( patient / doctor / nurse)</string>
-    
-    
- 
+    <string name="view_own_record_button">View Record</string>
+    <string name="edit_patient_record_button">Edit Record</string>
+    <string name="title_activity_patient_record">PatientRecordActivity</string>
+    <string name="ins_text_view">Insurance Number:</string>
+    <string name="name_text_view">Name:</string>
+    <string name="dob_text_view">DOB dd/mm/yyyy:</string>
+    <string name="height_text_view">Height (inches):</string>
+    <string name="weight_text_view">Weight (lbs):</string>
+    <string name="allergies_text_view">Allergies (..,..,):</string>
+    <string name="title_activity_doctor_edit_record">DoctorEditRecordActivity</string>
+    <string name="edit_button">Make Changes</string>
 
 </resources>

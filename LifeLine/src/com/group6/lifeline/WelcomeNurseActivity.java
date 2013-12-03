@@ -2,6 +2,7 @@ package com.group6.lifeline;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 
 public class WelcomeNurseActivity extends Activity {
@@ -11,6 +12,15 @@ public class WelcomeNurseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome_nurse);
 	}
+	
+	@Override
+    public void onBackPressed() {
+            super.onBackPressed();
+            
+            Intent i = new Intent(WelcomeNurseActivity.this, LifeLineActivity.class);
+            startActivity(i);
+            finish();
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

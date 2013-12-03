@@ -18,31 +18,36 @@
         android:textColor="@color/alice_blue"
         android:textSize="22sp" />
 
+    <Button
+        android:id="@+id/viewOwnRecordButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record2NameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:text="@string/view_own_record_button"
+        android:background="@color/boston_university_red"
+        android:textColor="@color/alice_blue" />
+
     <TextView
         android:id="@+id/welcome2TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/welcomeTextView"
+        android:layout_alignLeft="@+id/viewOwnRecordButton"
         android:layout_below="@+id/welcomeTextView"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
         android:text="@string/welcome_title"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <Spinner
-        android:id="@+id/patientListSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/welcomeTextView"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="120dp" />
-
     <TextView
-        android:id="@+id/patientsTextView"
+        android:id="@+id/record2NameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/patientListSpinner"
-        android:layout_alignLeft="@+id/patientListSpinner"
-        android:text="@string/patients_text_view" />
+        android:layout_alignTop="@+id/welcome2TextView"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/welcome2TextView"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

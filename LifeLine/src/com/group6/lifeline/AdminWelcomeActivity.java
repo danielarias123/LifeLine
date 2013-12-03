@@ -81,8 +81,8 @@ public class AdminWelcomeActivity extends Activity implements OnClickListener {
                         
                         break;
                 case R.id.dataBaseEnterButton:
-                	
-                	retrieveEntries();
+                	String[] columns = {"username","email"};
+                	retrieveEntries(columns,null,null);
                 	break;
         	}
 	}
@@ -99,31 +99,39 @@ public class AdminWelcomeActivity extends Activity implements OnClickListener {
         values.put("email", role);
         
         try{
-                db.insert(DbHelper.LIFELINE_TABLE_NAME, null, values);
+                db.insert(DbHelper.LOGIN_TABLE_NAME, null, values);
                 Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_SHORT).show();
         }catch(Exception e){
                 e.printStackTrace();
         }
+        db.close();
+        
 	}
+	
+	
+	
 	 @SuppressWarnings("deprecation")
-		public void retrieveEntries(){
+		public void retrieveEntries(String [] columns, String selection, String[] args){
          try{
                  
                  SQLiteDatabase db = myDb.getReadableDatabase();
                  
-                 String[] columns = {"username","email"};
                  
-                 Cursor cursor = db.query(DbHelper.LIFELINE_TABLE_NAME, columns, null, null, null, null, null);
+                 
+                 Cursor cursor = db.query(DbHelper.LOGIN_TABLE_NAME, columns, null, null, null, null, null);
                  if(cursor != null){
                          System.out.println("database showing");
                          startManagingCursor(cursor);
                          showDatabase(cursor);
                  }
+                 db.close();
+                 cursor.close();
                  System.out.println("Cursor NuLL");
                  
          }catch(Exception e){
                  e.printStackTrace();
          }
+         
      }
      
      public void showDatabase(Cursor cursor) {
