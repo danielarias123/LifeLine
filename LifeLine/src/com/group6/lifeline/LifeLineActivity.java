@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.sqlcipher.database.SQLiteDatabase;
+
 public class LifeLineActivity extends Activity implements OnClickListener{
 
 	TextView titleTextView;
@@ -24,6 +26,8 @@ public class LifeLineActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_life_line);
+		
+		SQLiteDatabase.loadLibs(this);
 		
 		LogInButton = (Button) findViewById(R.id.LogInbutton);
 		LogInButton.setOnClickListener(this);

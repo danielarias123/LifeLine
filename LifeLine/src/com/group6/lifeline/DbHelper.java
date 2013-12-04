@@ -1,6 +1,5 @@
 package com.group6.lifeline;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.util.Log;
 
 
@@ -97,17 +95,7 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
     	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
     	
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
@@ -126,18 +114,8 @@ public class DbHelper extends SQLiteOpenHelper{
     	Cursor c = mydb.query(LOGIN_TABLE_NAME, columns,clause, null, null, null, null, null);
     	
     	String result="";
-    	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
+
     	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
     		result = c.getString(idob)+"\n";
@@ -155,17 +133,8 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
+
     	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
     	
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
@@ -185,16 +154,7 @@ public class DbHelper extends SQLiteOpenHelper{
     	String result="";
     	
     	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
     	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
     		result = c.getString(iweight)+"\n";
@@ -212,18 +172,8 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
     	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
-    	
+
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
     		result = c.getString(iins)+"\n";
@@ -241,18 +191,7 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result ="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
     	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
-    	
     	
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
@@ -271,18 +210,8 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
+    
     	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
-    	
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
     		result = c.getString(iconc)+"\n";
@@ -302,18 +231,8 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
     	int iblood = c.getColumnIndex(USER_BLOOD);
-    	int inextapp = c.getColumnIndex(NEXT_APP);
-    	
+   
     	
     	for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
     		result = c.getString(iblood)+"\n";
@@ -332,16 +251,6 @@ public class DbHelper extends SQLiteOpenHelper{
     	
     	String result="";
     	
-    	
-    	int irow = c.getColumnIndex(USER_ID);
-    	int iname = c.getColumnIndex(USERNAME_COL);
-    	int idob = c.getColumnIndex(USER_DOB);
-    	int iheight = c.getColumnIndex(USER_HEIGHT);
-    	int iweight = c.getColumnIndex(USER_WEIGHT);
-    	int iins = c.getColumnIndex(INS_NUM);
-    	int ialler = c.getColumnIndex(USER_ALLER);
-    	int iconc = c.getColumnIndex(USER_CONCERNS);
-    	int iblood = c.getColumnIndex(USER_BLOOD);
     	int inextapp = c.getColumnIndex(NEXT_APP);
     	
     	
